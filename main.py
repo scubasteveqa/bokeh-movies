@@ -17,6 +17,7 @@ from bokeh.plotting import figure
 from bokeh.sampledata.movies_data import movie_path
 
 import bokeh.sampledata
+
 bokeh.sampledata.download()
 
 conn = sql.connect(movie_path)
