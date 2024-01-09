@@ -7,6 +7,9 @@ import sqlite3 as sql
 from os.path import dirname, join
 from pathlib import Path
 
+import bokeh.sampledata
+bokeh.sampledata.download()
+
 import numpy as np
 import pandas.io.sql as psql
 
@@ -17,7 +20,6 @@ from bokeh.plotting import figure
 from bokeh.sampledata.movies_data import movie_path
 
 import bokeh.sampledata
-
 bokeh.sampledata.download()
 
 conn = sql.connect(movie_path)
