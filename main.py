@@ -16,6 +16,9 @@ from bokeh.models import ColumnDataSource, Div, Select, Slider, TextInput
 from bokeh.plotting import figure
 from bokeh.sampledata.movies_data import movie_path
 
+import bokeh.sampledata
+bokeh.sampledata.download()
+
 conn = sql.connect(movie_path)
 query = (Path(__file__).parent / 'query.sql').read_text("utf8")
 movies = psql.read_sql(query, conn)
